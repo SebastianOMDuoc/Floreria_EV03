@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Floreria/ms-ventas/pom.xml" />
+        <option value="$PROJECT_DIR$/Floreria/ms-alertas/pom.xml" />
+        <option value="$PROJECT_DIR$/Floreria/ms-compras/pom.xml" />
+        <option value="$PROJECT_DIR$/Floreria/api-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/Floreria/ms-clientes/pom.xml" />
+        <option value="$PROJECT_DIR$/Floreria/ms-despachos/pom.xml" />
+        <option value="$PROJECT_DIR$/Floreria/ms-empleados/pom.xml" />
+        <option value="$PROJECT_DIR$/Floreria/ms-productos/pom.xml" />
+        <option value="$PROJECT_DIR$/Floreria/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/Floreria/ms-categorias/pom.xml" />
+        <option value="$PROJECT_DIR$/Floreria/ms-inventario/pom.xml" />
+        <option value="$PROJECT_DIR$/Floreria/ms-proveedores/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

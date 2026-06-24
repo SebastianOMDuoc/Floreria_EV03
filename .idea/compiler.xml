@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="api-gateway" />
+        <module name="eureka-server" />
+      </profile>
+      <profile name="Annotation profile for ms-proveedores" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.44/lombok-1.18.44.jar" />
+        </processorPath>
+        <module name="ms-compras" />
+        <module name="ms-alertas" />
+        <module name="ms-categorias" />
+        <module name="ms-proveedores" />
+        <module name="ms-productos" />
+        <module name="ms-clientes" />
+        <module name="ms-empleados" />
+        <module name="ms-despachos" />
+        <module name="ms-inventario" />
+        <module name="ms-ventas" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-gateway" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="ms-alertas" options="-parameters" />
+      <module name="ms-categorias" options="-parameters" />
+      <module name="ms-clientes" options="-parameters" />
+      <module name="ms-compras" options="-parameters" />
+      <module name="ms-despachos" options="-parameters" />
+      <module name="ms-empleados" options="-parameters" />
+      <module name="ms-inventario" options="-parameters" />
+      <module name="ms-productos" options="-parameters" />
+      <module name="ms-proveedores" options="-parameters" />
+      <module name="ms-ventas" options="-parameters" />
+    </option>
+  </component>
+</project>

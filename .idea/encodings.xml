@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Floreria/api-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Floreria/eureka-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Floreria/ms-alertas/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Floreria/ms-categorias/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Floreria/ms-clientes/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Floreria/ms-compras/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Floreria/ms-despachos/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Floreria/ms-empleados/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Floreria/ms-inventario/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Floreria/ms-productos/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Floreria/ms-proveedores/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Floreria/ms-ventas/src/main/java" charset="UTF-8" />
+  </component>
+</project>

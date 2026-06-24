@@ -1,0 +1,17 @@
+# Carpetas de compilación de Maven (No se deben subir)
+**/target/
+*.jar
+*.war
+
+# Archivos de configuración de IntelliJ IDEA
+.idea/
+*.iml
+out/
+gen/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de propiedades locales (por si tienes contraseñas)
+*.local
