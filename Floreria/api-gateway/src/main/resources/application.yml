@@ -10,7 +10,7 @@ spring:
         - id: ms_productos
           uri: lb://ms-productos
           predicates:
-            - Path=/api/productos/**
+            - Path=/api/productos/**, /v3/api-docs/**, /swagger-ui/**
 
         - id: ms_categorias
           uri: lb://ms-categorias
@@ -61,6 +61,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
 
 logging:
   level:
