@@ -10,7 +10,7 @@
         <module name="api-gateway" />
         <module name="eureka-server" />
       </profile>
-      <profile name="Annotation profile for ms-proveedores" enabled="true">
+      <profile name="Annotation profile for ms-ventas" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -25,8 +25,8 @@
         <module name="ms-clientes" />
         <module name="ms-empleados" />
         <module name="ms-despachos" />
-        <module name="ms-inventario" />
         <module name="ms-ventas" />
+        <module name="ms-inventario" />
       </profile>
     </annotationProcessing>
   </component>
