@@ -1,6 +1,23 @@
 version: '3.8'
 
 services:
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    networks:
+      - floreria-network
+
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
   eureka-server:
     build: Floreria/eureka-server
     container_name: eureka-server
@@ -13,7 +30,7 @@ services:
     build: Floreria/api-gateway
     container_name: api-gateway
     ports:
-      - "8081:8081" # El puerto exigido en la rúbrica
+      - "8081:8081"
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
     depends_on:
@@ -24,20 +41,32 @@ services:
   ms-productos:
     build: Floreria/ms-productos
     container_name: ms-productos
+    ports:
+      - "8082:8081"
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+      - SPRING_PROFILES_ACTIVE=prod
     depends_on:
-      - eureka-server
+      eureka-server:
+        condition: service_started
+      mysql:
+        condition: service_healthy
     networks:
       - floreria-network
 
   ms-ventas:
     build: Floreria/ms-ventas
     container_name: ms-ventas
+    ports:
+      - "8091:8081"
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+      - SPRING_PROFILES_ACTIVE=prod
     depends_on:
-      - eureka-server
+      eureka-server:
+        condition: service_started
+      mysql:
+        condition: service_healthy
     networks:
       - floreria-network
 
