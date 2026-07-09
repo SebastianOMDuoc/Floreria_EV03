@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   eureka-server:
-    build: ./eureka-server
+    build: Floreria/eureka-server
     container_name: eureka-server
     ports:
       - "8761:8761"
@@ -10,10 +10,10 @@ services:
       - floreria-network
 
   api-gateway:
-    build: ./api-gateway
+    build: Floreria/api-gateway
     container_name: api-gateway
     ports:
-      - "8080:8080" # El puerto exigido en la rúbrica
+      - "8081:8081" # El puerto exigido en la rúbrica
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
     depends_on:
@@ -22,7 +22,7 @@ services:
       - floreria-network
 
   ms-productos:
-    build: ./ms-productos
+    build: Floreria/ms-productos
     container_name: ms-productos
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
@@ -32,7 +32,7 @@ services:
       - floreria-network
 
   ms-ventas:
-    build: ./ms-ventas
+    build: Floreria/ms-ventas
     container_name: ms-ventas
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
