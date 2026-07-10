@@ -42,10 +42,13 @@ services:
     build: Floreria/ms-productos
     container_name: ms-productos
     ports:
-      - "8082:8081"
+      - "8082:8082"
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
       - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/floreria_productos?createDatabaseIfNotExist=true
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=
     depends_on:
       eureka-server:
         condition: service_started
@@ -58,10 +61,13 @@ services:
     build: Floreria/ms-ventas
     container_name: ms-ventas
     ports:
-      - "8091:8081"
+      - "8091:8091"
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
       - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/floreria_ventas?createDatabaseIfNotExist=true
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=
     depends_on:
       eureka-server:
         condition: service_started
