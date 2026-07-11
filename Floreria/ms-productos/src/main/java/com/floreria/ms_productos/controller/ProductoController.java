@@ -13,8 +13,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
+
 @RestController
-@RequestMapping("/api/productos")
+@RequestMapping("/api/productos") /*http://localhost:8081/api/productos*/
 @RequiredArgsConstructor
 @Tag(name = "Productos", description = "API para la gestión del catálogo de productos de la florería")
 public class ProductoController {
